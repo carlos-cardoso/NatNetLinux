@@ -93,6 +93,12 @@ public:
       struct sockaddr_in sockAddr = createAddress(inAddr, port);
       
       sd = socket(AF_INET, SOCK_DGRAM, 0);
+
+      int yes=1;
+      if (setsockopt(sd, SOL_SOCKET, SO_REUSEADDR, &yes,sizeof(int))==-1){
+        std::cerr << "Could not setsockopt. Error: " << errno << std::endl;
+      }
+      
       if( sd < 0 )
       {
          std::cerr << "Could not open socket. Error: " << errno << std::endl;
