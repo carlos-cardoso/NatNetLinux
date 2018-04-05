@@ -2,7 +2,7 @@
 This is a fork of NatNetLinux that provides a ready to use ROS node to publish both rigid bodies and single markers as ROS topics.
 
 ## Running:
-'''$ rosrun natnet_node -s "optitrack_pc_ip" -l "this_pc_ip"'''
+``` $ rosrun natnet_node -s "optitrack_pc_ip" -l "this_pc_ip" ```
 
 ## Messages
 
