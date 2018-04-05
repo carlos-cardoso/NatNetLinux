@@ -1,3 +1,39 @@
+# NatNetLinux-ROS
+This is a fork of NatNetLinux that provides a ready to use ROS node to publish both RigidBodies and Single markers as ROS topics.
+
+## Running:
+'$ rosrun natnet_node -s "optitrack_pc_ip" -l "this_pc_ip"'
+
+## Messages
+
+### Single Markers:
+```
+[natnet_node/unid_markers]:
+time stamp
+geometry_msgs/Point[] unid_markers
+  float64 x
+  float64 y
+  float64 z
+```
+
+### Rigid Bodies:
+```
+[natnet_node/rigid_bodies]:
+time stamp
+geometry_msgs/Pose[] rigid_bodies
+  geometry_msgs/Point position
+    float64 x
+    float64 y
+    float64 z
+  geometry_msgs/Quaternion orientation
+    float64 x
+    float64 y
+    float64 z
+    float64 w
+std_msgs/Int64[] rigid_body_ids
+  int64 data
+```
+
 # NatNetLinux
 
 The purpose of this package is to provide a lightweight library to read
