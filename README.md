@@ -1,4 +1,4 @@
-# NatNetLinux-ROS
+# natnet_node
 This is a fork of NatNetLinux that provides a ready to use ROS node to publish both rigid bodies and single markers as ROS topics.
 
 ## Running:
